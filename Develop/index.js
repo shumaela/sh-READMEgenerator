@@ -67,20 +67,21 @@ function writeToFile(fileName, data) {
 }
 
 // Created a function to initialize app
-function init() {
+async function init() {
     try {
-        // Prompt the user with questions
-        const answers = await inquirer.prompt(questions);
-
-        // Generate the README content
-        const readmeContent = generateMarkdown(answers);
-
-        // Write the README file
-        writeToFile('README.md', readmeContent);
+      // Prompt the user with questions
+      const answers = await inquirer.prompt(questions);
+  
+      // Generate the README content
+      const readmeContent = generateMarkdown(answers);
+  
+      // Write the README file
+      writeToFile('README.md', readmeContent);
     } catch (error) {
-        console.error('Error initializing the app:', error);
+      console.error('Error initializing the app:', error);
     }
-}
+  }
 
 // Function call to initialize app
-init();
+// init();
+init().catch(error => console.error('Unhandled promise rejection:', error));
