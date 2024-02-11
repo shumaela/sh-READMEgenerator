@@ -14,6 +14,39 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  # ${answers.title}
+
+## Description
+${answers.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+![License](https://img.shields.io/badge/license-${answers.license}-blue)
+${answers.licenseExplanation}
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Questions
+For additional questions, contact ${answers.email}.
+GitHub: [${answers.username}](https://github.com/${answers.username})
+
 `;
 }
 
