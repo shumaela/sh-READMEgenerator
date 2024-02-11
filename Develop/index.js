@@ -28,9 +28,10 @@ const questions = [
         message: 'What is your project description?'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'What kind of license should your project have?',
+        message: 'Choose a license for your application',
+        choices: ['MIT', 'GPL', 'Apache', 'BSD', 'None']
     },
     {
         type: 'input',
